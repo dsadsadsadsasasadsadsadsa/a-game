@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Guess the Number — Web</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Guess the Number</h1>
+
+    <section class="settings">
+      <label>Minimum: <input id="min" type="number" value="1" /></label>
+      <label>Maximum: <input id="max" type="number" value="100" /></label>
+      <button id="start">Start Game</button>
+    </section>
+
+    <section id="game" class="hidden">
+      <p id="range">I'm thinking of a number between <span id="rmin"></span> and <span id="rmax"></span>.</p>
+
+      <div class="controls">
+        <input id="guess" type="number" placeholder="Enter your guess" />
+        <button id="submit">Guess</button>
+        <button id="giveup" class="muted">Give up</button>
+        <button id="reset" class="muted">Reset</button>
+      </div>
+
+      <p id="feedback" class="feedback"></p>
+      <p id="attempts">Attempts: 0</p>
+    </section>
+
+    <footer>
+      <p>Static web version — opens in any modern browser. No server required.</p>
+    </footer>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
